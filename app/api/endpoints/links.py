@@ -1,16 +1,16 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
-from db.session import get_db
-from schemas.link import LinkCreate, LinkResponse, LinkUpdate, LinkStats
-from schemas.user import UserInDB
-from crud import crud_link
-from db.models import Link
-from core.redis import cache_redirect, get_cached_url
-from api.deps import get_current_user
+from app.db.session import get_db
+from app.schemas.link import LinkCreate, LinkResponse, LinkUpdate, LinkStats
+from app.schemas.user import UserInDB
+from app.crud import crud_link
+from app.db.models import Link
+from app.core.redis import cache_redirect, get_cached_url
+from app.api.deps import get_current_user
 from typing import Optional, List
-from core.logger import logger
-from core.redis import redis_client
+from app.core.logger import logger
+from app.core.redis import redis_client
 import json
 from datetime import datetime
 
@@ -58,8 +58,7 @@ def redirect_to_original(
     crud_link.update_link_stats(db, link)
     cache_redirect(short_code, str(link.original_url))
     
-    return  str(link.original_url)
-
+    return link.original_url
 
 @router.delete("/{short_code}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_link(

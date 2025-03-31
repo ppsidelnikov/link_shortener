@@ -3,7 +3,7 @@
 """
 
 from datetime import datetime
-from pydantic import BaseModel, HttpUrl, Field
+from pydantic import BaseModel, HttpUrl, Field, validator
 from typing import Optional
 
 class LinkBase(BaseModel):
@@ -21,6 +21,12 @@ class LinkCreate(LinkBase):
         None,
         description="Link lifetime in minutes"
     )
+
+    @validator('expires_in_minutes')
+    def validate_expires_in_minutes(cls, v):
+        if v is not None and v <= 0:
+            raise ValueError("Expiration time must be positive")
+        return v
 
 class LinkResponse(LinkBase):
     original_url: HttpUrl

@@ -4,10 +4,10 @@
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from sqlalchemy.orm import Session
-from db.session import get_db
-from crud import crud_link
+from app.db.session import get_db
+from app.crud import crud_link
 from datetime import datetime
-from core.logger import logger
+from app.core.logger import logger
 
 scheduler = BackgroundScheduler()
 

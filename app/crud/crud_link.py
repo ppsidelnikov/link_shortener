@@ -3,11 +3,11 @@
 """
 
 from sqlalchemy.orm import Session
-from db.models import Link
-from schemas.link import LinkCreate
+from app.db.models import Link
+from app.schemas.link import LinkCreate
 import random
 import string
-from core.logger import logger
+from app.core.logger import logger
 from typing import Optional
 from datetime import datetime, timedelta
 
