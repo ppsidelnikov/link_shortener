@@ -1,0 +1,14 @@
+fastapi
+apscheduler
+uvicorn 
+sqlalchemy
+fastapi-users[sqlalchemy]
+psycopg2-binary 
+redis 
+passlib 
+bcrypt 
+python-jose 
+python-multipart
+pydantic-settings
+alembic
+loguru

@@ -1,0 +1,38 @@
+services:
+  db:
+   image: postgres:15
+   restart: always
+   env_file: .env
+   environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+   ports:
+      - 5432:5432
+   volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: redis_app
+    command: --port 6379
+    expose:
+      - 6379
+
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@db:5432/url_shortener"  
+      REDIS_URL: "redis://redis:6379"        
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES}        
+      SECRET_KEY: ${SECRET_KEY}
+      ALGORITHM: "HS256"                     
+    ports:
+      - "8000:8000"                          
+    depends_on:
+      - db
+      - redis
+
+volumes:
+  postgres-data:

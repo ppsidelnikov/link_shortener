@@ -1,0 +1,219 @@
+2025-03-31 12:10:15,430 - database - INFO - Deleted expired links - [<db.models.Link object at 0x104451460>, <db.models.Link object at 0x1043fdf40>, <db.models.Link object at 0x104451490>, <db.models.Link object at 0x1044514c0>, <db.models.Link object at 0x1044514f0>, <db.models.Link object at 0x104451520>]
+2025-03-31 12:20:15,569 - database - INFO - Deleted expired links - []
+2025-03-31 12:21:15,515 - database - INFO - Deleted expired links - []
+2025-03-31 12:22:15,515 - database - INFO - Deleted expired links - []
+2025-03-31 12:23:15,513 - database - INFO - Deleted expired links - []
+2025-03-31 12:24:15,524 - database - INFO - Deleted expired links - []
+2025-03-31 12:25:15,537 - database - INFO - Deleted expired links - []
+2025-03-31 12:26:15,520 - database - INFO - Deleted expired links - []
+2025-03-31 12:27:15,513 - database - INFO - Deleted expired links - []
+2025-03-31 12:28:15,520 - database - INFO - Deleted expired links - []
+2025-03-31 12:29:15,510 - database - INFO - Deleted expired links - []
+2025-03-31 12:30:15,522 - database - INFO - Deleted expired links - []
+2025-03-31 12:31:15,515 - database - INFO - Deleted expired links - []
+2025-03-31 12:32:15,527 - database - INFO - Deleted expired links - []
+2025-03-31 12:33:15,523 - database - INFO - Deleted expired links - []
+2025-03-31 12:34:15,515 - database - INFO - Deleted expired links - []
+2025-03-31 12:35:15,507 - database - INFO - Deleted expired links - []
+2025-03-31 12:36:15,520 - database - INFO - Deleted expired links - []
+2025-03-31 12:37:15,510 - database - INFO - Deleted expired links - []
+2025-03-31 12:38:15,519 - database - INFO - Deleted expired links - []
+2025-03-31 12:39:15,513 - database - INFO - Deleted expired links - []
+2025-03-31 12:40:15,523 - database - INFO - Deleted expired links - []
+2025-03-31 12:41:15,530 - database - INFO - Deleted expired links - []
+2025-03-31 12:42:15,523 - database - INFO - Deleted expired links - []
+2025-03-31 12:43:15,520 - database - INFO - Deleted expired links - []
+2025-03-31 12:44:15,514 - database - INFO - Deleted expired links - []
+2025-03-31 12:45:15,546 - database - INFO - Deleted expired links - []
+2025-03-31 12:46:15,516 - database - INFO - Deleted expired links - []
+2025-03-31 12:47:15,522 - database - INFO - Deleted expired links - []
+2025-03-31 12:48:15,536 - database - INFO - Deleted expired links - []
+2025-03-31 12:58:10,965 - database - INFO - Deleted expired links - []
+2025-03-31 12:59:10,867 - database - INFO - Deleted expired links - []
+2025-03-31 13:00:10,862 - database - INFO - Deleted expired links - []
+2025-03-31 13:02:53,954 - database - INFO - Deleted expired links - []
+2025-03-31 13:03:53,908 - database - INFO - Deleted expired links - []
+2025-03-31 13:04:53,909 - database - INFO - Deleted expired links - []
+2025-03-31 13:05:04,679 - database - ERROR - Failed to create link: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_links_short_code"
+DETAIL:  Key (short_code)=(yndx_new) already exists.
+
+[SQL: INSERT INTO links (original_url, short_code, created_at, expires_at, last_accessed, access_count, owner_id) VALUES (%(original_url)s, %(short_code)s, %(created_at)s, %(expires_at)s, %(last_accessed)s, %(access_count)s, %(owner_id)s) RETURNING links.id]
+[parameters: {'original_url': 'http://ya.ru/', 'short_code': 'yndx_new', 'created_at': datetime.datetime(2025, 3, 31, 10, 5, 4, 675124), 'expires_at': datetime.datetime(2025, 3, 31, 13, 5, 4, 672694), 'last_accessed': None, 'access_count': 0, 'owner_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-03-31 13:05:46,837 - database - INFO - Link created: id=16, short_code=bermuda, owner_id=None
+2025-03-31 13:05:53,893 - database - INFO - Deleted expired links - []
+2025-03-31 13:06:54,073 - database - INFO - Deleted expired links - []
+2025-03-31 13:07:53,906 - database - INFO - Deleted expired links - []
+2025-03-31 13:11:39,256 - database - INFO - Deleted expired links - []
+2025-03-31 13:11:50,379 - database - ERROR - Failed to create link: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_links_short_code"
+DETAIL:  Key (short_code)=(bermuda) already exists.
+
+[SQL: INSERT INTO links (original_url, short_code, created_at, expires_at, last_accessed, access_count, owner_id) VALUES (%(original_url)s, %(short_code)s, %(created_at)s, %(expires_at)s, %(last_accessed)s, %(access_count)s, %(owner_id)s) RETURNING links.id]
+[parameters: {'original_url': 'https://en.wikipedia.org/wiki/Economy_of_Bermuda', 'short_code': 'bermuda', 'created_at': datetime.datetime(2025, 3, 31, 10, 11, 50, 377018), 'expires_at': datetime.datetime(2025, 3, 31, 13, 11, 50, 374444), 'last_accessed': None, 'access_count': 0, 'owner_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-03-31 13:12:39,182 - database - INFO - Deleted expired links - []
+2025-03-31 13:13:39,181 - database - INFO - Deleted expired links - []
+2025-03-31 13:15:16,330 - database - INFO - Deleted expired links - []
+2025-03-31 13:16:16,254 - database - INFO - Deleted expired links - []
+2025-03-31 13:17:16,253 - database - INFO - Deleted expired links - []
+2025-03-31 13:18:16,249 - database - INFO - Deleted expired links - []
+2025-03-31 13:19:16,254 - database - INFO - Deleted expired links - []
+2025-03-31 13:20:16,252 - database - INFO - Deleted expired links - []
+2025-03-31 13:20:59,831 - database - INFO - Link created: id=18, short_code=bermuda_2, owner_id=None
+2025-03-31 13:21:16,254 - database - INFO - Deleted expired links - []
+2025-03-31 13:22:16,255 - database - INFO - Deleted expired links - []
+2025-03-31 13:23:16,247 - database - INFO - Deleted expired links - []
+2025-03-31 13:24:16,254 - database - INFO - Deleted expired links - []
+2025-03-31 13:24:41,769 - database - INFO - Link created: id=19, short_code=bermuda_3, owner_id=None
+2025-03-31 13:25:16,254 - database - INFO - Deleted expired links - []
+2025-03-31 13:26:16,278 - database - INFO - Deleted expired links - []
+2025-03-31 13:27:16,255 - database - INFO - Deleted expired links - []
+2025-03-31 13:28:16,249 - database - INFO - Deleted expired links - []
+2025-03-31 13:28:35,815 - database - INFO - Link created: id=20, short_code=bermuda_5, owner_id=3
+2025-03-31 13:29:16,258 - database - INFO - Deleted expired links - []
+2025-03-31 13:30:16,255 - database - INFO - Deleted expired links - []
+2025-03-31 13:31:16,254 - database - INFO - Deleted expired links - []
+2025-03-31 13:32:03,144 - database - INFO - Link created: id=21, short_code=bermuda_10_min, owner_id=3
+2025-03-31 13:32:36,408 - database - INFO - Deleted expired links - []
+2025-03-31 13:33:36,410 - database - INFO - Deleted expired links - []
+2025-03-31 13:34:36,403 - database - INFO - Deleted expired links - []
+2025-03-31 13:35:36,414 - database - INFO - Deleted expired links - []
+2025-03-31 13:36:36,409 - database - INFO - Deleted expired links - []
+2025-03-31 13:37:36,406 - database - INFO - Deleted expired links - []
+2025-03-31 13:38:36,416 - database - INFO - Deleted expired links - []
+2025-03-31 13:39:36,403 - database - INFO - Deleted expired links - []
+2025-03-31 13:40:59,632 - database - INFO - Deleted expired links - []
+2025-03-31 13:41:13,260 - database - ERROR - Failed to get link stats: 'NoneType' object has no attribute 'id'
+2025-03-31 13:41:59,627 - database - INFO - Deleted expired links - []
+2025-03-31 13:42:59,640 - database - INFO - Deleted expired links - [<db.models.Link object at 0x1088c0fe0>]
+2025-03-31 13:43:59,639 - database - INFO - Deleted expired links - []
+2025-03-31 13:44:45,434 - database - ERROR - Failed to get link stats: 401: Not authenticated
+2025-03-31 13:45:00,022 - database - ERROR - Failed to get link stats: 401: Not authenticated
+2025-03-31 13:45:07,649 - database - ERROR - Failed to get link stats: 404: No links found for this user
+2025-03-31 13:45:36,005 - database - INFO - User 3 successfully requested link stats
+2025-03-31 13:45:36,006 - database - ERROR - Failed to get link stats: 'list' object has no attribute 'short_code'
+2025-03-31 13:45:40,189 - database - INFO - Deleted expired links - []
+2025-03-31 13:46:40,199 - database - INFO - Deleted expired links - []
+2025-03-31 13:47:40,213 - database - INFO - Deleted expired links - []
+2025-03-31 13:48:40,195 - database - INFO - Deleted expired links - []
+2025-03-31 13:49:39,495 - database - INFO - User 3 successfully requested link stats
+2025-03-31 13:50:00,472 - database - INFO - User 3 successfully requested link stats
+2025-03-31 13:50:22,125 - database - INFO - Deleted expired links - []
+2025-03-31 13:51:35,114 - database - INFO - User 3 successfully requested link stats
+2025-03-31 13:52:12,871 - database - INFO - Deleted expired links - [<db.models.Link object at 0x1047ad430>]
+2025-03-31 13:53:12,857 - database - INFO - Deleted expired links - []
+2025-03-31 13:54:12,858 - database - INFO - Deleted expired links - []
+2025-03-31 13:55:38,467 - database - INFO - Deleted expired links - []
+2025-03-31 13:55:46,149 - database - INFO - Link deleted: id=20, short_code=bermuda_5, owner_id=3
+2025-03-31 13:56:38,451 - database - INFO - Deleted expired links - []
+2025-03-31 14:01:05,075 - database - INFO - Link deleted: id=14, short_code=yndx_new, owner_id=3
+2025-03-31 14:01:56,207 - database - INFO - Deleted expired links - [<db.models.Link object at 0x10a1fa7b0>]
+2025-03-31 14:02:56,201 - database - INFO - Deleted expired links - []
+2025-03-31 14:03:55,887 - database - ERROR - Failed to create link: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_links_short_code"
+DETAIL:  Key (short_code)=(bermuda) already exists.
+
+[SQL: INSERT INTO links (original_url, short_code, created_at, expires_at, last_accessed, access_count, owner_id) VALUES (%(original_url)s, %(short_code)s, %(created_at)s, %(expires_at)s, %(last_accessed)s, %(access_count)s, %(owner_id)s) RETURNING links.id]
+[parameters: {'original_url': 'https://en.wikipedia.org/wiki/Economy_of_Bermuda', 'short_code': 'bermuda', 'created_at': datetime.datetime(2025, 3, 31, 11, 3, 55, 886231), 'expires_at': datetime.datetime(2025, 3, 31, 14, 3, 55, 884909), 'last_accessed': None, 'access_count': 0, 'owner_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-03-31 14:04:18,248 - database - INFO - Deleted expired links - []
+2025-03-31 14:04:56,842 - database - INFO - Link created: id=23, short_code=bermuda_5, owner_id=3
+2025-03-31 14:05:03,058 - database - INFO - User 3 successfully requested link stats
+2025-03-31 14:05:18,229 - database - INFO - Deleted expired links - []
+2025-03-31 14:05:23,605 - database - INFO - Link created: id=24, short_code=bermuda_5, owner_id=None
+2025-03-31 14:05:26,788 - database - ERROR - Failed to get link stats: 404: No links found for this user
+2025-03-31 14:05:36,003 - database - ERROR - Failed to get link stats: 401: Not authenticated
+2025-03-31 14:06:18,234 - database - INFO - Deleted expired links - []
+2025-03-31 14:07:18,239 - database - INFO - Deleted expired links - []
+2025-03-31 14:08:18,240 - database - INFO - Deleted expired links - []
+2025-03-31 14:09:18,245 - database - INFO - Deleted expired links - []
+2025-03-31 14:12:21,564 - database - INFO - Deleted expired links - []
+2025-03-31 14:13:21,499 - database - INFO - Deleted expired links - []
+2025-03-31 14:14:21,545 - database - INFO - Deleted expired links - []
+2025-03-31 14:15:21,507 - database - INFO - Deleted expired links - []
+2025-03-31 14:16:21,523 - database - INFO - Deleted expired links - [<db.models.Link object at 0x106709a90>]
+2025-03-31 14:17:21,516 - database - INFO - Deleted expired links - []
+2025-03-31 14:18:34,313 - database - INFO - Deleted expired links - []
+2025-03-31 14:20:10,756 - database - INFO - Deleted expired links - []
+2025-03-31 14:22:48,475 - database - INFO - Deleted expired links - []
+2025-03-31 14:23:48,459 - database - INFO - Deleted expired links - []
+2025-03-31 14:24:48,448 - database - INFO - Deleted expired links - []
+2025-03-31 14:26:32,052 - database - INFO - Deleted expired links - []
+2025-03-31 14:27:32,031 - database - INFO - Deleted expired links - []
+2025-03-31 14:32:07,647 - database - INFO - Link created: id=25, short_code=bermuda_1, owner_id=None
+2025-03-31 14:32:54,080 - database - INFO - No expired links found.
+2025-03-31 14:33:54,114 - database - INFO - Deleted 1 expired links:
+ID: 25, Short Code: bermuda_1, Original URL: https://en.wikipedia.org/wiki/Economy_of_Bermuda, Expires At: 2025-03-31 11:33:07.594241
+2025-03-31 14:34:54,276 - database - INFO - No expired links found.
+2025-03-31 14:35:54,081 - database - INFO - No expired links found.
+2025-03-31 14:36:54,068 - database - INFO - No expired links found.
+2025-03-31 14:37:54,071 - database - INFO - No expired links found.
+2025-03-31 14:38:54,071 - database - INFO - No expired links found.
+2025-03-31 14:46:39,386 - database - INFO - No expired links found.
+2025-03-31 14:47:18,376 - database - INFO - Link created: id=26, short_code=newyork, owner_id=None
+2025-03-31 14:47:38,803 - database - INFO - Link created: id=27, short_code=newyork_2, owner_id=None
+2025-03-31 14:47:39,383 - database - INFO - No expired links found.
+2025-03-31 14:48:39,379 - database - INFO - No expired links found.
+2025-03-31 14:49:32,392 - database - ERROR - Failed to get link stats: 401: Not authenticated
+2025-03-31 14:49:43,534 - database - ERROR - Failed to create link: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_links_short_code"
+DETAIL:  Key (short_code)=(newyork_2) already exists.
+
+[SQL: INSERT INTO links (original_url, short_code, created_at, expires_at, last_accessed, access_count, owner_id) VALUES (%(original_url)s, %(short_code)s, %(created_at)s, %(expires_at)s, %(last_accessed)s, %(access_count)s, %(owner_id)s) RETURNING links.id]
+[parameters: {'original_url': 'https://en.wikipedia.org/wiki/New_York_(state)', 'short_code': 'newyork_2', 'created_at': datetime.datetime(2025, 3, 31, 11, 49, 43, 533013), 'expires_at': datetime.datetime(2025, 3, 31, 11, 50, 43, 483002), 'last_accessed': None, 'access_count': 0, 'owner_id': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-03-31 14:50:27,989 - database - INFO - No expired links found.
+2025-03-31 14:51:27,987 - database - INFO - No expired links found.
+2025-03-31 14:52:27,984 - database - INFO - No expired links found.
+2025-03-31 14:53:27,985 - database - INFO - No expired links found.
+2025-03-31 14:53:44,683 - database - INFO - Link created: id=29, short_code=newyork_3, owner_id=4
+2025-03-31 14:54:04,078 - database - INFO - Link created: id=30, short_code=newyork_3, owner_id=4
+2025-03-31 14:54:10,129 - database - ERROR - Failed to get link stats: 401: Not authenticated
+2025-03-31 14:54:14,238 - database - INFO - User 4 successfully requested link stats
+2025-03-31 14:54:14,238 - database - ERROR - Failed to get link stats: Object of type datetime is not JSON serializable
+2025-03-31 14:54:27,988 - database - INFO - No expired links found.
+2025-03-31 14:55:27,988 - database - INFO - No expired links found.
+2025-03-31 14:56:27,989 - database - INFO - No expired links found.
+2025-03-31 14:58:10,787 - database - INFO - Deleted 1 expired links:
+ID: 27, Short Code: newyork_2, Original URL: https://en.wikipedia.org/wiki/New_York_(state), Expires At: 2025-03-31 11:57:38.799523
+2025-03-31 14:59:10,756 - database - INFO - No expired links found.
+2025-03-31 15:00:10,778 - database - INFO - No expired links found.
+2025-03-31 15:01:10,756 - database - INFO - No expired links found.
+2025-03-31 15:02:10,772 - database - INFO - No expired links found.
+2025-03-31 15:03:10,760 - database - INFO - No expired links found.
+2025-03-31 15:04:10,763 - database - INFO - No expired links found.
+2025-03-31 15:05:10,761 - database - INFO - No expired links found.
+2025-03-31 15:06:10,771 - database - INFO - No expired links found.
+2025-03-31 15:07:10,757 - database - INFO - No expired links found.
+2025-03-31 15:08:10,760 - database - INFO - No expired links found.
+2025-03-31 15:14:48,537 - database - INFO - No expired links found.
+2025-03-31 15:15:48,471 - database - INFO - No expired links found.
+2025-03-31 15:16:48,469 - database - INFO - No expired links found.
+2025-03-31 15:17:48,472 - database - INFO - No expired links found.
+2025-03-31 15:18:48,469 - database - INFO - No expired links found.
+2025-03-31 15:19:48,477 - database - INFO - No expired links found.
+2025-03-31 15:20:48,477 - database - INFO - No expired links found.
+2025-03-31 15:21:48,494 - database - INFO - No expired links found.
+2025-03-31 15:22:48,476 - database - INFO - No expired links found.
+2025-03-31 15:23:48,477 - database - INFO - No expired links found.
+2025-03-31 15:24:48,477 - database - INFO - No expired links found.
+2025-03-31 15:26:08,771 - database - INFO - Link created: id=31, short_code=newyork_3, owner_id=None
+2025-03-31 15:26:15,559 - database - INFO - Link created: id=32, short_code=newyork_5, owner_id=5
+2025-03-31 15:26:33,094 - database - INFO - No expired links found.
+2025-03-31 15:26:37,218 - database - ERROR - Failed to get link stats: 404: Link not found or access denied
+2025-03-31 15:26:40,959 - database - INFO - Link created: id=33, short_code=newyork_5, owner_id=5
+2025-03-31 15:27:33,094 - database - INFO - No expired links found.
+2025-03-31 15:28:33,100 - database - INFO - No expired links found.
+2025-03-31 15:29:33,100 - database - INFO - No expired links found.
+2025-03-31 15:30:33,090 - database - INFO - No expired links found.
+2025-03-31 15:31:33,097 - database - INFO - No expired links found.
+2025-03-31 15:32:33,101 - database - INFO - No expired links found.
+2025-03-31 15:33:33,100 - database - INFO - No expired links found.
+2025-03-31 15:34:33,094 - database - INFO - No expired links found.
+2025-03-31 15:35:33,093 - database - INFO - No expired links found.
+2025-03-31 15:36:33,106 - database - INFO - Deleted 1 expired links:
+ID: 31, Short Code: newyork_3, Original URL: https://en.wikipedia.org/wiki/New_York_(state), Expires At: 2025-03-31 12:36:08.764148
+2025-03-31 15:37:33,102 - database - INFO - Deleted 1 expired links:
+ID: 33, Short Code: newyork_5, Original URL: https://en.wikipedia.org/wiki/Atlantic_Ocean, Expires At: 2025-03-31 12:36:40.955438
+2025-03-31 15:38:33,112 - database - INFO - No expired links found.
+2025-03-31 15:39:33,091 - database - INFO - No expired links found.
+2025-03-31 15:40:33,101 - database - INFO - No expired links found.
+2025-03-31 15:41:33,108 - database - INFO - No expired links found.
